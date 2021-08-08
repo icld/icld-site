@@ -1,32 +1,58 @@
+/** @jsxRuntime classic */
+/** @jsx jsx */
 import Link from 'next/link';
-import styles from '../../styles/Home.module.css';
+import { Link as linky } from 'theme-ui';
+import { Flex } from 'theme-ui';
+// import styles from '../../styles/Home.module.css';
+import { jsx } from 'theme-ui';
 
-export default () => (
-  <>
-    <div>
+const Nav = (props) => (
+  <div
+    sx={{
+      height: '60px',
+      width: '100vw',
+      bg: 'background',
+      borderBottom: '1px solid',
+      borderColor: 'primary',
+    }}
+  >
+    <nav
+      sx={{
+        width: '90%',
+        maxWidth: '960px',
+        m: 'auto',
+
+        display: 'Flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        variant: 'containers.page',
+        height: '100%',
+      }}
+    >
       <Link href='/'>
-        <a>ICLD</a>
+        <linky sx={{ variant: 'links.nav' }}>ICLD</linky>
       </Link>
-
       <Link href='/about'>
-        <a>ABOUT</a>
+        <a sx={{ variant: 'links.nav' }}>ABOUT</a>
       </Link>
 
       <Link href='/projects'>
-        <a>PROJECTS</a>
+        <a sx={{ variant: 'links.nav' }}>PROJECTS</a>
       </Link>
 
       <Link href='/blog'>
-        <a>BLOG</a>
+        <a sx={{ variant: 'links.nav' }}>BLOG</a>
       </Link>
 
       <Link href='/lx'>
-        <a>LX</a>
+        <a sx={{ variant: 'links.nav' }}>LX</a>
       </Link>
 
       <Link href='/contact'>
-        <a>CONTACT</a>
+        <a sx={{ variant: 'links.nav' }}>CONTACT</a>
       </Link>
-    </div>
-  </>
+    </nav>
+  </div>
 );
+
+export default Nav;
