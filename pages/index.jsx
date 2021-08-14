@@ -5,23 +5,33 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { jsx } from 'theme-ui';
 
+import Header from '../src/Components/Header';
+
 export default function Home() {
   return (
-    <div>
+    <div sx={{ variant: 'containers.page' }}>
       <Head>
         <title>ICLD.io</title>
         <meta name='description' content='icld' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>Welcome to icld.io</h1>
+      <main>
+        <Image
+          src='/images/_DSF5585.JPG'
+          priority={true}
+          loading='eager'
+          // quality='10'
+          layout='fill'
+          objectFit='cover'
+          objectPosition='center'
+          sx={{ position: 'relative', zIndex: -1 }}
+        />
+        <h1>Welcome to icld.io</h1>
 
-        <p className={styles.description}>
-          Hello! I am a Portland, Oregon based freelancer.
-        </p>
+        <p>Hello! I am a Portland, Oregon based freelancer.</p>
 
-        <div className={styles.grid}></div>
+        <div></div>
       </main>
     </div>
   );

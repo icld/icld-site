@@ -1,11 +1,14 @@
-import Header from '../src/Components/Header';
-import styles from '../styles/Home.module.css';
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import React from 'react';
+import Link from 'next/link';
+import router, { useRouter } from 'next/router';
+import { jsx } from 'theme-ui';
 export default () => (
   <>
-    <div className={styles.container}>
-      <Header />
-      <main className={styles.main}>
-        <h1 className={styles.title}>About Page</h1>
+    <div sx>
+      <main sx={{ variant: 'containers.page' }}>
+        <h1>About Page</h1>
       </main>
     </div>
   </>
